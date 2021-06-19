@@ -1,0 +1,138 @@
+.hore {
+  text-align: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.9fr 1.2fr 0.9fr;
+  grid-template-rows: 0.4fr 2.3fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "top top top"
+    "links center upg"
+    "contact contact contact";
+}
+.top {
+  grid-area: top;
+  background: rgb(255, 255, 255);
+  box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.137);
+}
+
+.links {
+  grid-area: links;
+}
+
+.upg {
+  display: grid;
+  grid-template-columns: 2.1fr 0.1fr 1fr;
+  grid-template-rows: 0.7fr 0.7fr 1.7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "upg1 . ."
+    "upg2 . ."
+    ". . .";
+  grid-area: upg;
+}
+
+.upg1 {
+  grid-area: upg1;
+}
+
+.upg2 {
+  grid-area: upg2;
+}
+
+.contact {
+  grid-area: contact;
+}
+
+.center {
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.8fr 1.3fr 0.9fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". text ."
+    ". clicky ."
+    ". . .";
+  grid-area: center;
+  background: rgba(255, 255, 255, 0.356);
+}
+
+.clicky {
+  grid-area: clicky;
+}
+
+.text {
+  grid-area: text;
+}
+
+html,
+body,
+.container {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    to right top,
+    #ffbb66,
+    #ff9d8d,
+    #ff91c4,
+    #ce9bf2,
+    #66aaff
+  );
+}
+
+#myImage {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.tlac {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+#clicky {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 5px 5px rgba(0, 0, 0, 0.349);
+  font-size: 8vh;
+}
+.upgrade {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  display: inline-block;
+}
+.upgrade .img-top {
+  position: absolute;
+  display: none;
+  margin-top: -0em;
+  margin-left: -7.5em;
+}
+.upgrade:hover .img-top {
+  display: inline;
+}
+
+#bunnycost {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.349);
+  font-size: 2.5vh;
+}
