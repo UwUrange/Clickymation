@@ -1,7 +1,9 @@
 .hore {
   text-align: center;
 }
-
+.darkth {
+  width: 70%;
+}
 .container {
   display: grid;
   grid-template-columns: 0.9fr 1.2fr 0.9fr;
@@ -131,6 +133,63 @@ body {
 }
 
 #bunnycost {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.349);
+  font-size: 2.5vh;
+}
+.cisco {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.ChangeColor {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.blau {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.tmava {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.pastelka {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+.mesiacik {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin-top: -5vh;
+}
+#ruter {
   color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.349);

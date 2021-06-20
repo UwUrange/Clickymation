@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="script.js"></script>
     <link href="index.css" rel="stylesheet" />
+    <script type="text/javascript" src="/script.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,10 +13,22 @@
     <div class="container">
       <div class="top">
         <h1 class="hore">
-          <img id="nazov" src="click.png" />
+          <img class="nazov" src="click.png" />
         </h1>
       </div>
-      <div class="links"></div>
+      <div class="links">
+      </button>
+      <button class="ChangeColor" onClick="ChangeColor()">
+        <img src="pozr.png" alt="" />
+      </button>
+      <button class="blau" onClick="Blau()">
+        <img src="darkci.png" alt="" />
+      </button>
+      <button class="tmava" onClick="Blackish()">
+        <img src="actdark.png" alt="">
+      </button>
+      <button class="pastelka" onClick="Pastelka()"><img src="pastelky.png" alt=""></button>
+      </div>
       <div class="upg">
         <div class="upg1">
           <button class="upgrade" onClick="Bunnygrade()">
@@ -25,9 +37,15 @@
             <p><a id="bunnycost">30</a></p>
           </button>
         </div>
-        <div class="upg2"></div>
+        <div class="upg2">
+          <button class="cisco" onClick="Ruter()">
+            <img id="ruters" src="cisco.png" alt="" />
+            <p><a id="ruter">2500</a></p>
+        </div>
       </div>
-      <div class="contact"></div>
+      <div class="contact">
+          <button class="mesiacik"><img src="darkth.png" class="darkth" onClick="DarkTheme()"></button>
+      </div>
       <div class="center">
         <div class="clicky" style="text-align: center;">
           <button class="tlac" onClick="onClick()">
