@@ -84,7 +84,7 @@ function Pastelka() {
 function Ruter() {
   if (clicky >= ruter) {
     clicky = clicky - ruter;
-    ruter = ruter * 2;
+    ruter = ruter * 1.25;
     sped = sped * 0.5;
     document.getElementById("ruter").innerHTML = ruter;
   }
