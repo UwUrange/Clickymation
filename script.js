@@ -1,10 +1,11 @@
-
 var addv = 1;
 var index = 0;
 var clicky = 0;
 var bunnycost = 30;
 var sped = 2500;
 var ruter = 2500;
+var ssi = 200;
+var boomling = 1000;
 var imageList = [
   "cube1.png",
   "cube2.png",
@@ -56,6 +57,8 @@ window.onbeforeunload = function () {
   localStorage.setItem("bunnycost", bunnycost);
   localStorage.setItem("ruter", ruter);
   localStorage.setItem("sped", sped);
+  localStorage.setItem("boomling", boomling);
+  localStorage.setItem("ssi", ssi);
 };
 window.onload = function () {
   if (localStorage.getItem("clicky") >= 1) {
@@ -65,6 +68,10 @@ window.onload = function () {
     if (localStorage.getItem("ruter") >= 2501) {
       ruter = parseInt(localStorage.getItem("ruter"));
       sped = parseInt(localStorage.getItem("sped"));
+    }
+    if (localStorage.getItem("boomling") >= 1001) {
+      boomling = parseInt(localStorage.getItem("boomling"));
+      ssi = parseInt(localStorage.getItem("ssi"));
     }
   }
 };
@@ -84,8 +91,8 @@ function Pastelka() {
 function Ruter() {
   if (clicky >= ruter) {
     clicky = clicky - ruter;
-    ruter = ruter * 1.25;
-    sped = sped * 0.5;
+    ruter = ruter * 2;
+    sped = sped * 0.2;
     document.getElementById("ruter").innerHTML = ruter;
   }
 }
@@ -95,3 +102,18 @@ setInterval(function () {
     document.getElementById("clicky").innerHTML = clicky;
   }
 }, sped);
+
+function Boom() {
+  if (clicky >= boomling) {
+    clicky = clicky - boomling;
+    boomling = boomling * 1.5;
+    ssi = ssi + 50;
+    document.getElementById("boomling").innerHTML = boomling;
+  }
+}
+setInterval(function () {
+  if (boomling >= 1001) {
+    clicky = clicky + ssi;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 10000);
