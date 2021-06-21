@@ -106,7 +106,7 @@ setInterval(function () {
 function Boom() {
   if (clicky >= boomling) {
     clicky = clicky - boomling;
-    boomling = boomling * 1.5;
+    boomling = boomling * 2;
     ssi = ssi + 50;
     document.getElementById("boomling").innerHTML = boomling;
   }
