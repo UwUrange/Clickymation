@@ -1,7 +1,4 @@
-window.onload = function () {
-  var usrn = prompt("Set Your Username:");
-  document.getElementById("usrn").innerHTML = usrn;
-};
+
 var addv = 1;
 var index = 0;
 var clicky = 0;
@@ -88,7 +85,7 @@ function Ruter() {
   if (clicky >= ruter) {
     clicky = clicky - ruter;
     ruter = ruter * 2;
-    sped = sped * 0.8;
+    sped = sped * 0.5;
     document.getElementById("ruter").innerHTML = ruter;
   }
 }
