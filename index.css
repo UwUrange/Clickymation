@@ -1,5 +1,10 @@
 .hore {
   text-align: center;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .darkth {
   width: 70%;
@@ -101,6 +106,13 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  
 }
 
 .tlac {
@@ -157,6 +169,12 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .blau {
@@ -166,6 +184,12 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 .tmava {
   background-color: Transparent;
@@ -174,6 +198,12 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 }
 
 .pastelka {
@@ -214,12 +244,29 @@ body {
   overflow: hidden;
   outline: none;
 }
+.contact{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ffbb56;
+  margin: 0;
+}
 #kont {
-  color: rgb(251, 255, 0);
-  font-family: Arial, Helvetica, sans-serif;
-  text-shadow: 2px 2px rgba(0, 0, 0, 0.349);
-  font-size: 2.5vh;
+
+  background-color: #ff9c40; 
+  border: none;
+  color: white;
+  padding: 15px 32px;
   text-decoration: none;
+  font-size: 16px;
+  border-radius:15%;}
+
+#kont:hover {
+  background-color: #ff7b00;
+  color: white;
 }
 
 @media only screen and (max-width: 500px) {
@@ -231,3 +278,4 @@ body {
     margin-left: 8vw;
   }
 }
+
