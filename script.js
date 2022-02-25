@@ -34,8 +34,6 @@ function onClick() {
   clicky += addv;
   var clickier = clicky;
   document.getElementById("clicky").innerHTML = clicky;
-  clickier = clicky;
-  document.getElementById("clickier").innerHTML = clickier;
   localStorage.setItem("clicky", clicky);
 }
 
