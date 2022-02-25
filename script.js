@@ -3,7 +3,7 @@ var index = 0;
 var clicky = 0;
 var bunnycost = 30;
 var sped = 2500;
-var ruter = 2500;
+var ruter = 250;
 var ssi = 200;
 var boomling = 1000;
 var imageList = [
@@ -65,7 +65,7 @@ window.onload = function () {
     clicky = parseInt(localStorage.getItem("clicky"));
     addv = parseInt(localStorage.getItem("addv"));
     bunnycost = parseInt(localStorage.getItem("bunnycost"));
-    if (localStorage.getItem("ruter") >= 2501) {
+    if (localStorage.getItem("ruter") >= 251) {
       ruter = parseInt(localStorage.getItem("ruter"));
       sped = parseInt(localStorage.getItem("sped"));
     }
@@ -74,6 +74,10 @@ window.onload = function () {
       ssi = parseInt(localStorage.getItem("ssi"));
     }
   }
+  document.getElementById("clicky").innerHTML = clicky;
+  document.getElementById("bunnycost").innerHTML = bunnycost;
+  document.getElementById("ruter").innerHTML = ruter;
+  document.getElementById("boomling").innerHTML = boomling;
 };
 function ChangeColor() {
   document.body.style.backgroundImage = "url('rainbow.png')";
@@ -97,11 +101,95 @@ function Ruter() {
   }
 }
 setInterval(function () {
-  if (ruter >= 2501) {
+  if (ruter >= 251) {
     clicky++;
     document.getElementById("clicky").innerHTML = clicky;
   }
-}, sped);
+}, 2500);
+
+setInterval(function () {
+  if (ruter >= 501) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 1250);
+
+setInterval(function () {
+  if (ruter >= 1001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 625);
+
+setInterval(function () {
+  if (ruter >= 2001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 312);
+
+setInterval(function () {
+  if (ruter >= 4001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 156);
+
+setInterval(function () {
+  if (ruter >= 8001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 78);
+
+setInterval(function () {
+  if (ruter >= 16001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 39);
+
+setInterval(function () {
+  if (ruter >= 32001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 20);
+
+setInterval(function () {
+  if (ruter >= 64001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 10);
+
+setInterval(function () {
+  if (ruter >= 128001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 5);
+
+setInterval(function () {
+  if (ruter >= 256001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 2);
+
+setInterval(function () {
+  if (ruter >= 512001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 1);
+
+setInterval(function () {
+  if (ruter >= 1024001) {
+    clicky++;
+    document.getElementById("clicky").innerHTML = clicky;
+  }
+}, 0);
 
 function Boom() {
   if (clicky >= boomling) {
@@ -117,3 +205,17 @@ setInterval(function () {
     document.getElementById("clicky").innerHTML = clicky;
   }
 }, 10000);
+
+function Resett() {
+  localStorage.setItem("clicky", 0);
+  localStorage.setItem("addv", 1);
+  localStorage.setItem("bunnycost", 30);
+  localStorage.setItem("ruter", 250);
+  localStorage.setItem("sped", 2500);
+  localStorage.setItem("boomling", 1000);
+  localStorage.setItem("ssi", 200);
+}
+function Resett(){
+  document.location.reload(true)
+}
+
