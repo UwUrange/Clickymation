@@ -350,5 +350,21 @@ body {
     position: absolute;
     display: none;
   }
+    #upga {
+    position: absolute;
+    display: none;
+  }
+      #upgb {
+    position: absolute;
+    display: none;
+  }
+      #upgc {
+    position: absolute;
+    display: none;
+  }
+  #science{
+  margin-left: 15vw ;
+
+}
 }
 
