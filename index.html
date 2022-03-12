@@ -3,18 +3,19 @@
   <head>
     <link href="index.css" rel="stylesheet" />
     <script type="text/javascript" src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Adam Ujházy">
     <link rel="icon" href="/computermousecursor_85795.ico" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <title>Clickymation</title>
   </head>
   <body>
     <div class="container">
       <div class="top">
-        <h1 class="hore">
           <img class="nazov" src="click.png" />
-        </h1>
       </div>
       <div class="links">
       </button>
@@ -32,25 +33,33 @@
       <div class="upg">
         <div class="upg1">
           <button class="upgrade" onClick="Bunnygrade()">
+            <div class="desc">Increases points <br> per click
+              <div id="upga">0</div></div>
             <img src="bunny.png" />
             <img src="bunny1.png" class="img-top" />
             <p><a id="bunnycost">30</a></p>
           </button>
         </div>
         <div class="upg2">
+          <div class="desc" >Increases points <br> per second
+            <div id="upgb">0</div></div>
           <button class="cisco" onClick="Ruter()">
             <img id="ruters" src="cisco.png" alt="" />
             <p><a id="ruter">250</a></p>
         </div>
         <div class="upg3">
+          <div class="desc">Gives a bunch <br> of points each 10s
+            <div id="upgc">0</div></div>
           <button class="bomba" onClick="Boom()">
           <img id="booom" src="boom.png">
-          </button>
           <p><a id="boomling">1000</a></p>
+          </button>
         </div>
       </div>
       <div class="contact">
-          <a id="kontakt" href="contact.html"><button id="kont">Kontakt</button></a> 
+        <img id="darkth" src="darkth.png" width="50px" height="50px" onClick="Dark()" alt="">
+        <img id="science" src="physic.png" width="50px" height="50px" onClick="Science()" alt="">
+          <a id="kontakt" href="contact.html"><button id="kont">Contact</button></a> 
           <button onClick="Resett()">Reset</button>
       </div>
       <div class="center">

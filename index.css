@@ -1,13 +1,20 @@
-.hore {
-  text-align: center;
+
+
+html{
+  margin: 0;
+}
+
+.nazov{
+  display: flex;
+  align-self: center;
+  justify-self: center;
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-}
-.darkth {
-  width: 70%;
+  display: flex;
+  margin: 0;
 }
 .container {
   display: grid;
@@ -19,11 +26,18 @@
     "top top top"
     "links center upg"
     "contact contact contact";
+    margin: 0;
 }
 .top {
   grid-area: top;
   background: rgb(255, 255, 255);
   box-shadow: 5px 10px 10px 5px rgba(0, 0, 0, 0.137);
+  transition: background-color .5s ease-out ;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 13.3vh;
+  margin: 0;
 }
 
 .links {
@@ -41,6 +55,7 @@
     "upg2 . ."
     "upg3 . .";
   grid-area: upg;
+  margin: 0;
 }
 
 .upg1 {
@@ -53,6 +68,33 @@
 
 .upg3 {
   grid-area: upg3;
+}
+
+
+.desc{
+  margin-left: 8vw;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  font-family: 'Poppins' ;
+  font-size: 1vw;
+  color: rgb(255, 255, 255);
+  margin-top: 5vh;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.211);
+
+}
+
+#upga,#upgb,#upgc{
+  text-align: right;
+  position: absolute;
+  display: flex;
+  font-family: 'Poppins' ;
+  font-size: 2vw;
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.211);
+  margin-top: 6vh;
+  margin-left: 3.5vw;
+
 }
 
 .contact {
@@ -68,9 +110,11 @@
   grid-template-areas:
     ". text ."
     ". clicky ."
-    ". . .";
+    ". clicky .";
   grid-area: center;
   background: rgba(255, 255, 255, 0.356);
+  transition: background-color .5s ease-out ;
+  margin: 0;
 }
 
 .clicky {
@@ -97,6 +141,8 @@ body {
     #ce9bf2,
     #66aaff
   );
+  transition: background-color .5s ease-out ;
+  margin: 0;
 }
 
 #myImage {
@@ -106,12 +152,14 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  transition: .5s ease-out ;
 
   -webkit-user-drag: none;
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  margin: 0;
   
 }
 
@@ -122,12 +170,14 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  margin: 0;
 }
 #clicky {
   color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 5px 5px rgba(0, 0, 0, 0.349);
   font-size: 8vh;
+  margin: 0;
 }
 .upgrade {
   background-color: Transparent;
@@ -136,7 +186,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
-  display: inline-block;
+  float: left;
 }
 .upgrade .img-top {
   position: absolute;
@@ -153,6 +203,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.349);
   font-size: 2.5vh;
+  margin: 0;
 }
 .cisco {
   background-color: Transparent;
@@ -161,6 +212,8 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  float: left;
+  margin: 0;
 }
 .ChangeColor {
   background-color: Transparent;
@@ -169,6 +222,7 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  margin: 0;
 
   -webkit-user-drag: none;
   user-select: none;
@@ -190,6 +244,7 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  margin: 0;
 }
 .tmava {
   background-color: Transparent;
@@ -204,6 +259,7 @@ body {
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  margin: 0;
 }
 
 .pastelka {
@@ -213,28 +269,23 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  margin: 0;
 }
-.mesiacik {
-  background-color: Transparent;
-  background-repeat: no-repeat;
-  border: none;
-  cursor: pointer;
-  overflow: hidden;
-  outline: none;
-  margin-top: -5vh;
-}
+
 #ruter {
   color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.349);
   font-size: 2.5vh;
+  margin: 0;
 }
 #boomling {
   color: aliceblue;
   font-family: Arial, Helvetica, sans-serif;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.349);
   font-size: 2.5vh;
-  margin-left: 2vw;
+  text-align: center;
+  margin: 0;
 }
 .bomba {
   background-color: Transparent;
@@ -243,6 +294,8 @@ body {
   cursor: pointer;
   overflow: hidden;
   outline: none;
+  float: left;
+  margin: 0;
 }
 .contact{
   width: 100%;
@@ -253,6 +306,8 @@ body {
   flex-direction: column;
   background-color: #ffbb56;
   margin: 0;
+  transition: background-color .5s ease-out ;
+
 }
 #kont {
 
@@ -262,20 +317,38 @@ body {
   padding: 15px 32px;
   text-decoration: none;
   font-size: 16px;
-  border-radius:15%;}
+  border-radius:15%;
+  margin: 0;
+}
 
 #kont:hover {
   background-color: #ff7b00;
   color: white;
+  margin: 0;
 }
+
+#darkth{
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  padding-left:20px ;
+  cursor: pointer;
+  margin: 0;
+}
+
+#science{
+  display: flex;
+  align-self: flex-start;
+  position: absolute;
+  margin-left: 6vw ;
+  cursor: pointer;
+}
+
 
 @media only screen and (max-width: 500px) {
   .links {
     position: absolute;
     display: none;
-  }
-  #boomling {
-    margin-left: 8vw;
   }
 }
 

@@ -2,10 +2,14 @@ var addv = 1;
 var index = 0;
 var clicky = 0;
 var bunnycost = 30;
-var sped = 2500;
 var ruter = 250;
 var ssi = 200;
 var boomling = 1000;
+var night= "OFF";
+var science= "OFF";
+var upga= "0";
+var upgb= "0";
+var upgc= "0";
 var imageList = [
   "cube1.png",
   "cube2.png",
@@ -32,9 +36,11 @@ function changeImage() {
 
 function onClick() {
   clicky += addv;
-  var clickier = clicky;
   document.getElementById("clicky").innerHTML = clicky;
   localStorage.setItem("clicky", clicky);
+  if (clicky>=10000) {
+    document.getElementById("clicky").innerHTML = clicky.toExponential(0);
+  }
 }
 
 function Bunnygrade() {
@@ -43,6 +49,8 @@ function Bunnygrade() {
     addv = addv + 1;
     bunnycost = bunnycost * 2;
     document.getElementById("bunnycost").innerHTML = bunnycost;
+    upga++;
+    document.getElementById("upga").innerHTML = upga;
   } else {
     alert("Not enough points!");
     localStorage.setItem("addv", addv);
@@ -54,18 +62,22 @@ window.onbeforeunload = function () {
   localStorage.setItem("addv", addv);
   localStorage.setItem("bunnycost", bunnycost);
   localStorage.setItem("ruter", ruter);
-  localStorage.setItem("sped", sped);
   localStorage.setItem("boomling", boomling);
   localStorage.setItem("ssi", ssi);
+  localStorage.setItem("upga", upga);
+  localStorage.setItem("upgb", upgb);
+  localStorage.setItem("upgc", upgc);
 };
 window.onload = function () {
   if (localStorage.getItem("clicky") >= 1) {
     clicky = parseInt(localStorage.getItem("clicky"));
     addv = parseInt(localStorage.getItem("addv"));
     bunnycost = parseInt(localStorage.getItem("bunnycost"));
+    upga = parseInt(localStorage.getItem("upga"));
+    upgb = parseInt(localStorage.getItem("upgb"));
+    upgc = parseInt(localStorage.getItem("upgc"));
     if (localStorage.getItem("ruter") >= 251) {
       ruter = parseInt(localStorage.getItem("ruter"));
-      sped = parseInt(localStorage.getItem("sped"));
     }
     if (localStorage.getItem("boomling") >= 1001) {
       boomling = parseInt(localStorage.getItem("boomling"));
@@ -76,26 +88,44 @@ window.onload = function () {
   document.getElementById("bunnycost").innerHTML = bunnycost;
   document.getElementById("ruter").innerHTML = ruter;
   document.getElementById("boomling").innerHTML = boomling;
+  document.getElementById("upga").innerHTML = upga;
+  document.getElementById("upgb").innerHTML = upgb;
+  document.getElementById("upgc").innerHTML = upgc;
 };
 function ChangeColor() {
   document.body.style.backgroundImage = "url('rainbow.png')";
+  $(".contact").animate().css({
+    backgroundColor: "#FF67E8"
+  }, 2500);
 }
 function Blau() {
   document.body.style.backgroundImage = "url('blue.png')";
+  $(".contact").animate().css({
+    backgroundColor: "#8952FF"
+  }, 2500);
 }
 function Blackish() {
   document.body.style.backgroundImage = "url('dark.png')";
+  $(".contact").animate().css({
+    backgroundColor: "#2B2529"
+  }, 2500);
 }
 
 function Pastelka() {
   document.body.style.backgroundImage = "url('pastel.png')";
+  $(".contact").animate().css({
+    backgroundColor: "#A5FFD3"
+  }, 2500);
 }
 function Ruter() {
   if (clicky >= ruter) {
     clicky = clicky - ruter;
     ruter = ruter * 2;
-    sped = sped * 0.2;
     document.getElementById("ruter").innerHTML = ruter;
+    upgb++;
+    document.getElementById("upgb").innerHTML = upgb;
+  } else {
+    alert("Not enough points!");
   }
 }
 setInterval(function () {
@@ -184,7 +214,7 @@ setInterval(function () {
 
 setInterval(function () {
   if (ruter >= 1024001) {
-    clicky++;
+    clicky=clicky+upgb-15;
     document.getElementById("clicky").innerHTML = clicky;
   }
 }, 0);
@@ -195,6 +225,10 @@ function Boom() {
     boomling = boomling * 2;
     ssi = ssi + 50;
     document.getElementById("boomling").innerHTML = boomling;
+    upgc++;
+    document.getElementById("upgc").innerHTML = upgc;
+  } else {
+    alert("Not enough points!");
   }
 }
 setInterval(function () {
@@ -209,7 +243,6 @@ function Resett() {
   localStorage.setItem("addv", 1);
   localStorage.setItem("bunnycost", 30);
   localStorage.setItem("ruter", 250);
-  localStorage.setItem("sped", 2500);
   localStorage.setItem("boomling", 1000);
   localStorage.setItem("ssi", 200);
 }
@@ -217,3 +250,51 @@ function Resett(){
   document.location.reload(true)
 }
 
+function Dark() {
+  if (night == "OFF") {
+    night = "ON";
+    document.body.style.backgroundImage = "url('peach.png')";
+    $(".contact").animate().css({
+      backgroundColor: "#2A2A2A"
+    }, 2500);
+  
+    $(".top").animate().css({
+      backgroundColor: "#2A2A2A"
+    }, 2500);
+  
+    $(".center").animate().css({
+      backgroundColor: "#3C3C3C"
+    }, 2500);
+  
+    $("body").animate().css({
+      backgroundImage: "#FFBA68"
+    }, 2500);
+  } else {
+    night = "OFF";
+    document.location.reload(true)
+  }
+}
+
+function Science() {
+  if (science == "OFF") {
+    science = "ON";
+    setInterval(function() {
+      if (clicky >=1) {
+        document.getElementById("clicky").innerHTML = clicky.toExponential(0);
+        document.getElementById("bunnycost").innerHTML = bunnycost.toExponential(0);
+        document.getElementById("ruter").innerHTML = ruter.toExponential(0);
+        document.getElementById("boomling").innerHTML = boomling.toExponential(0);
+      }; 
+    }, 0);
+  } else {
+    science = "OFF";
+    document.location.reload(true)
+  }
+}
+
+window.onkeydown = function(event){
+  if(event.keyCode === 32) {
+      event.preventDefault();
+      document.querySelector('#myImage').click();
+  }
+};
