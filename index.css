@@ -362,6 +362,12 @@ body {
     position: absolute;
     display: none;
   }
+  
+   .desc {
+    position: absolute;
+    display: none;
+  }
+  
   #science{
   margin-left: 15vw ;
 
