@@ -38,9 +38,6 @@ function onClick() {
   clicky += addv;
   document.getElementById("clicky").innerHTML = clicky;
   localStorage.setItem("clicky", clicky);
-  if (clicky>=10000) {
-    document.getElementById("clicky").innerHTML = clicky.toExponential(0);
-  }
 }
 
 function Bunnygrade() {
